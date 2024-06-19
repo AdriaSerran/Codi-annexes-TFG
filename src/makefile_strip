@@ -1,0 +1,13 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -O2
+LDFLAGS = 
+
+strip_tqdm: strip_tqdm.o
+	$(CC) $(LDFLAGS) -o $@ $^
+
+strip_tqdm.o: strip_tqdm.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+clean:
+	rm -f strip_tqdm strip_tqdm.o
+

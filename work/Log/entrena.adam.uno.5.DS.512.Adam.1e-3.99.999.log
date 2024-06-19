@@ -1,0 +1,26 @@
+Adris-Laptop
+/home/grauvi/TFG/Joan-main/work
+Thu Apr 25 11:46:13 CEST 2024
+../src/entrena.py -x conf/mod_ls.py,conf/topos.py -E 'lotesLS("./Prm", "./Trn", "./Lis/fonemas.lis", 5, "./Gui/train-clean-100.gui")' -D 'lotesLS("./Prm", "./Trn", "./Lis/fonemas.lis", 1, "./Gui/dev-clean.gui")' -M 'ModLS(ficLisUni="./Lis/fonemas.lis", red=DeepSpeech(n_feature=numCof, n_hidden=512, n_class=tamVoc), Optim=lambda params: torch.optim.Adam(params, lr=1e-3, betas=(0.99, 0.999)), ficLog="./Evo/adam.uno.5.DS.512.Adam.1e-3.99.999.evo", device="cuda")' -e 10 -v 10
+Carga de las transcripciones de ('./Gui/train-clean-100.gui',) (25/Apr/24 11:46:17):
+100%|==========| 28538/28538 [01:50<00:00, 257.89it/s]
+Carga de las transcripciones de ('./Gui/dev-clean.gui',) (25/Apr/24 11:48:08):
+100%|==========| 2703/2703 [00:08<00:00, 329.41it/s]
+Traceback (most recent call last):
+  File "/home/grauvi/TFG/Joan-main/work/../src/entrena.py", line 83, in <module>
+    modelo = eval(expr)
+  File "<string>", line 1, in <module>
+  File "<string>", line 61, in __init__
+  File "/home/grauvi/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1152, in to
+    return self._apply(convert)
+  File "/home/grauvi/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 802, in _apply
+    module._apply(fn)
+  File "/home/grauvi/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 802, in _apply
+    module._apply(fn)
+  File "/home/grauvi/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 825, in _apply
+    param_applied = fn(param)
+  File "/home/grauvi/.local/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1150, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+  File "/home/grauvi/.local/lib/python3.10/site-packages/torch/cuda/__init__.py", line 302, in _lazy_init
+    torch._C._cuda_init()
+RuntimeError: Found no NVIDIA driver on your system. Please check that you have an NVIDIA GPU and installed a driver from http://www.nvidia.com/Download/index.aspx

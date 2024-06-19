@@ -1,0 +1,19 @@
+LibriSpeech Alignments
+Loren Lugosch
+
+This contains phoneme alignments and word alignments (= labels for each timestep) for all 980 hours of LibriSpeech.
+
+We obtained these alignments using the Montreal Forced Aligner, using their pre-trained LibriSpeech acoustic model. To make it easy to replicate the experiments in our paper, we provide these alignments, so you don't need to run the aligner yourself. Note that for a small number of audio files, the aligner could not compute an alignment; we did not use these audios during training.
+
+If you find these alignments or other parts of our experiment useful, please cite our paper:
+
+Loren Lugosch, Mirco Ravanelli, Patrick Ignoto, Vikrant Singh Tomar, and Yoshua Bengio, "Speech Model Pre-training for End-to-End Spoken Language Understanding", Interspeech 2019.
+
+as well as the Montreal Forced Aligner paper:
+
+Michael McAuliffe, Michaela Socolof, Sarah Mihuc, Michael Wagner, and Morgan Sonderegger. "Montreal Forced Aligner: trainable text-speech alignment using Kaldi", Interspeech 2017.
+
+
+###############################################################################################################
+
+copiado de https://zenodo.org/record/2619474#.Yw9Jx3bP2M8

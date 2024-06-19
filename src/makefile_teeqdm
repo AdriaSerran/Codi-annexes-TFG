@@ -1,0 +1,13 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -O2
+LDFLAGS = 
+
+teeqdm: teeqdm.o
+	$(CC) $(LDFLAGS) -o $@ $^
+
+teeqdm.o: teeqdm.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+clean:
+	rm -f teeqdm teeqdm.o
+
